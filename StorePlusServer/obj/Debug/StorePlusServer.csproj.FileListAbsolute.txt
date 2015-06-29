@@ -1,0 +1,14 @@
+E:\dvlp\StorePlusServer\StorePlusServer\bin\StorePlusServer.dll.config
+E:\dvlp\StorePlusServer\StorePlusServer\bin\StorePlusServer.dll
+E:\dvlp\StorePlusServer\StorePlusServer\bin\StorePlusServer.pdb
+E:\dvlp\StorePlusServer\StorePlusServer\bin\Newtonsoft.Json.dll
+E:\dvlp\StorePlusServer\StorePlusServer\bin\System.Net.Http.Formatting.dll
+E:\dvlp\StorePlusServer\StorePlusServer\bin\System.Web.Http.dll
+E:\dvlp\StorePlusServer\StorePlusServer\bin\System.Web.Http.WebHost.dll
+E:\dvlp\StorePlusServer\StorePlusServer\bin\Newtonsoft.Json.xml
+E:\dvlp\StorePlusServer\StorePlusServer\bin\System.Net.Http.Formatting.xml
+E:\dvlp\StorePlusServer\StorePlusServer\bin\System.Web.Http.xml
+E:\dvlp\StorePlusServer\StorePlusServer\bin\System.Web.Http.WebHost.xml
+E:\dvlp\StorePlusServer\StorePlusServer\obj\Debug\StorePlusServer.csprojResolveAssemblyReference.cache
+E:\dvlp\StorePlusServer\StorePlusServer\obj\Debug\StorePlusServer.dll
+E:\dvlp\StorePlusServer\StorePlusServer\obj\Debug\StorePlusServer.pdb
