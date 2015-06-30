@@ -11,17 +11,31 @@ using System.Web.Http;
 
 namespace StorePlusServer.Controllers
 {
-
-    
-    [RoutePrefix("api/items")]
-    public class StorePlusController : ApiController
+    [RoutePrefix("store/{storeId}/items")]
+    public class StoreItemsController : ApiController
     {
+        private const String DEFAULT_LANG = "en";
+        private const String DEFAULT_CURRENCY = "$";
+
         [Route("{itemId}")]
-        public HttpResponseMessage Get(String itemId)
-        {
+        public HttpResponseMessage Get(String itemId) {
+            return this.Get(itemId, DEFAULT_LANG, DEFAULT_CURRENCY);
+        }
+
+        [Route("{itemId}/lang/{lang?}")]
+        public HttpResponseMessage Get(String itemId, String lang = DEFAULT_LANG) {
+            return this.Get(itemId, lang, DEFAULT_CURRENCY);
+        }
+
+        [Route("{itemId}/lang/{lang?}/currency/{currency?}")]
+        public HttpResponseMessage Get(String itemId, String lang = DEFAULT_LANG, String currency = DEFAULT_CURRENCY) {
             SingleItem singleItem = null;
             if (itemId == "0688740980202") {
-                singleItem = new SingleItem("0688740980202", "Micro-patterned oxford shirt", 25.99, "http://static.zara.net/photos//2015/V/0/2/p/4036/260/403/2/w/1024/4036260403_1_1_1.jpg");
+                string title = "Micro-patterned oxford shirt";
+                if (lang == "he")
+                    title = "חולצה מיקרו כותנה";
+
+                singleItem = new SingleItem("0688740980202", title, 25.99, "http://static.zara.net/photos//2015/V/0/2/p/4036/260/403/2/w/1024/4036260403_1_1_1.jpg");
                 singleItem.sizes.Add(new SingleItem.ItemSize("s", "S", inbagsStock: "0", availbleStock: "4"));
                 singleItem.sizes.Add(new SingleItem.ItemSize("m", "M", inbagsStock: "1", availbleStock: "2"));
                 singleItem.sizes.Add(new SingleItem.ItemSize("l", "L", inbagsStock: "2", availbleStock: "5"));

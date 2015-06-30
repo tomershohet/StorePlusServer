@@ -13,6 +13,9 @@ namespace StorePlusServer.Models
         public double price;
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public String color;
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public String currency;
         public String imageURL;
 
@@ -24,7 +27,6 @@ namespace StorePlusServer.Models
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public String location;
-
 
         public SingleItem(String id, String title, Double price, String imageURL, String currency = null, List<ItemSize> itemSizes = null, DateTime? date = null, String location = null)
         {

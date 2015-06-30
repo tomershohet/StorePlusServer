@@ -78,11 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\StorePlusController.cs" />
+    <Compile Include="Controllers\BagController.cs" />
+    <Compile Include="Controllers\StoreItemsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bag.cs" />
     <Compile Include="Models\SingleItem.cs" />
+    <Compile Include="Models\storePlusResponse.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
